@@ -2,6 +2,10 @@ const form = document.querySelector('#form');
 const todo = [];
 form.addEventListener('submit',(e)=>{
   e.preventDefault();
+  list();
+});
+
+const list = () =>{
   let userRequest = form.elements.req.value;
   if (userRequest === "list") {
     console.log("**********");
@@ -26,6 +30,4 @@ form.addEventListener('submit',(e)=>{
       console.log("Unknown index");
     }
   }
-});
-
-
+}
